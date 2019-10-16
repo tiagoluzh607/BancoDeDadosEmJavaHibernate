@@ -60,7 +60,7 @@ public class UsuarioDAO {
     public boolean existeNoBancoPorUsuarioESenha(Usuario usuarioNovo){
         
         String jpql = "select u from "+ Usuario.class.getSimpleName() +" as u "
-                + "where u.nome = :pUsuario and u.senha = :pSenha";
+                + "where u.usuario = :pUsuario and u.senha = :pSenha";
         Query query = this.em.createQuery(jpql);
         query.setParameter("pUsuario", usuarioNovo.getUsuario());
         query.setParameter("pSenha", usuarioNovo.getSenha());

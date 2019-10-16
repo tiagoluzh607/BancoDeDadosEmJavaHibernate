@@ -24,6 +24,8 @@ public class Usuario {
     private String senha;
     private String email;
     
+    @Deprecated
+    public Usuario(){}
 
     public Usuario(int id, String usuario, String senha) {
         this.id = id;
@@ -62,6 +64,10 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "("+this.id+") - "+this.usuario;
+    }
+   
 }
