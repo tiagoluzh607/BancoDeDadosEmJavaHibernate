@@ -19,8 +19,8 @@ public class TesteHibernate {
         EntityManager em = new JPAUtil().getEntityManager();
         em.getTransaction().begin();
             
-            Usuario usuario = new Usuario("tiagoluz", "654321");
-            em.persist(usuario);
+            Usuario usuario = new Usuario("tiagoluz", "8547854");
+            new UsuarioDAO(em).insert(usuario);
             
         em.getTransaction().commit();
         em.close();
